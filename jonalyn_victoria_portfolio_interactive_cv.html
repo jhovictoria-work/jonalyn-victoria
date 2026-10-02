@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonalyn Victoria | Operations & Customer Support Specialist</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                        },
+                        navy: {
+                            800: '#0f172a',
+                            900: '#0b0f19',
+                            950: '#05070d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styling -->
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+        }
+        .dark .glass-nav {
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(16px);
+        }
+
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+                font-size: 12pt;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .glass-card {
+                background: none !important;
+                border: 1px solid #ddd !important;
+                box-shadow: none !important;
+                backdrop-filter: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-navy-900 text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 no-print" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 border-b border-slate-200/50 dark:border-slate-800/50 glass-nav rounded-b-2xl px-4 sm:px-6 mt-0 shadow-sm">
+                <!-- Brand Logo / Name -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-teal-400 flex items-center justify-center text-white font-extrabold text-lg shadow-md group-hover:scale-105 transition-transform">
+                        JV
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg text-slate-900 dark:text-white tracking-tight block leading-tight">Jonalyn Victoria</span>
+                        <span class="text-xs text-brand-600 dark:text-brand-500 font-medium">Ops & Support Specialist</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#about" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-500 transition-colors">About</a>
+                    <a href="#skills" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Competencies</a>
+                    <a href="#experience" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Experience</a>
+                    <a href="#education" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Education & Certs</a>
+                </nav>
+
+                <!-- Actions: Dark Mode Toggle & Direct Resume Link -->
+                <div class="flex items-center gap-3">
+                    <button id="themeToggle" aria-label="Toggle theme" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                        <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-lg text-amber-400"></i>
+                    </button>
+
+                    <a href="https://tinyurl.com/victoriajonalyn" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-semibold transition-all">
+                        <i class="fa-solid fa-file-pdf text-brand-500"></i>
+                        <span>View CV Link</span>
+                    </a>
+
+                    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-teal-600 hover:from-brand-700 hover:to-teal-700 text-white text-sm font-semibold shadow-md shadow-brand-500/20 hover:shadow-lg transition-all">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <span>Contact Me</span>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" aria-label="Toggle Mobile Menu" class="md:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden md:hidden max-w-7xl mx-auto px-4 mt-2">
+            <div class="glass-card rounded-2xl p-5 flex flex-col gap-4 shadow-xl border border-slate-200/80 dark:border-slate-800">
+                <a href="#about" class="mobile-link py-2 font-semibold text-slate-700 dark:text-slate-200">About</a>
+                <a href="#skills" class="mobile-link py-2 font-semibold text-slate-700 dark:text-slate-200">Competencies & Tools</a>
+                <a href="#experience" class="mobile-link py-2 font-semibold text-slate-700 dark:text-slate-200">Professional Experience</a>
+                <a href="#education" class="mobile-link py-2 font-semibold text-slate-700 dark:text-slate-200">Education & Certifications</a>
+                <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex gap-2">
+                    <a href="https://tinyurl.com/victoriajonalyn" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-center font-semibold text-sm">
+                        <i class="fa-solid fa-file-pdf mr-2 text-brand-500"></i>View CV Link
+                    </a>
+                    <a href="#contact" class="mobile-link flex-1 py-2.5 rounded-xl bg-brand-600 text-white text-center font-semibold text-sm">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-teal-500/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 dark:bg-brand-950/60 border border-brand-200 dark:border-brand-800/50 text-brand-700 dark:text-brand-400 text-xs font-bold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                        Available for Remote & Operations Roles
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-none">
+                        Jonalyn Victoria
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-brand-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                        Admin & Operations Specialist | Customer Support Professional
+                    </p>
+
+                    <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Results-driven Operations and Customer Support professional with <strong class="text-slate-900 dark:text-white">17+ years of experience</strong> across eCommerce, BPO, and digital business environments. Specialized in optimizing workflows, cross-functional SOP creation, CRM systems, and executive administrative support.
+                    </p>
+
+                    <!-- Contact Quick Badges with updated phone number -->
+                    <div class="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
+                        <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl glass-card text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">
+                            <i class="fa-solid fa-location-dot text-brand-500"></i> Muntinlupa City, PH
+                        </span>
+                        <a href="mailto:jhovictoria.work@gmail.com" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl glass-card text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-brand-600 transition-colors">
+                            <i class="fa-solid fa-envelope text-brand-500"></i> jhovictoria.work@gmail.com
+                        </a>
+                        <a href="tel:+638980041846" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl glass-card text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-brand-600 transition-colors">
+                            <i class="fa-solid fa-phone text-brand-500"></i> +63 898 004 1846
+                        </a>
+                    </div>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#experience" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:bg-slate-800 dark:hover:bg-slate-100 transition-all shadow-lg shadow-slate-900/10">
+                            <span>Explore Experience</span>
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                        <a href="https://tinyurl.com/victoriajonalyn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl glass-card border border-slate-300 dark:border-slate-700 font-bold text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-500"></i>
+                            <span>View / Download CV</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-500 to-teal-500 opacity-30 blur-xl"></div>
+                        <div class="relative glass-card rounded-3xl p-8 shadow-2xl space-y-6">
+                            
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500 to-teal-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                                    JV
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl text-slate-900 dark:text-white">Jonalyn Victoria</h3>
+                                    <p class="text-xs text-brand-600 dark:text-brand-400 font-semibold uppercase tracking-wider">Remote Ops & CS Specialist</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">17+ Years Industry Expertise</p>
+                                </div>
+                            </div>
+
+                            <hr class="border-slate-200 dark:border-slate-800">
+
+                            <!-- Highlight List -->
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3">
+                                    <div class="p-1.5 rounded-lg bg-brand-500/10 text-brand-500 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">
+                                        <strong class="text-slate-900 dark:text-white">Multi-System Mastery:</strong> Shopify, Gorgias, Zendesk, Monday.com, Pipedrive.
+                                    </p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="p-1.5 rounded-lg bg-brand-500/10 text-brand-500 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">
+                                        <strong class="text-slate-900 dark:text-white">Process Optimization:</strong> SOP creation, HIPAA compliance & workflow streamlining.
+                                    </p>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="p-1.5 rounded-lg bg-brand-500/10 text-brand-500 mt-0.5">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">
+                                        <strong class="text-slate-900 dark:text-white">Certified Skills:</strong> Six Sigma Yellow Belt & QuickBooks Certified.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <div class="p-4 rounded-2xl bg-brand-50 dark:bg-brand-950/40 border border-brand-200/60 dark:border-brand-900/60 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-brand-800 dark:text-brand-300">Status: Available Immediately</span>
+                                    <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-500 animate-ping"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Banner Section -->
+    <section class="py-10 bg-slate-100/80 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-2xl glass-card">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-600 dark:text-brand-500">17+</div>
+                    <div class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">Years Experience</div>
+                </div>
+                <div class="p-4 rounded-2xl glass-card">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-teal-600 dark:text-teal-400">20+</div>
+                    <div class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">CRM & Tech Platforms</div>
+                </div>
+                <div class="p-4 rounded-2xl glass-card">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-cyan-600 dark:text-cyan-400">100%</div>
+                    <div class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">SLA & CSAT Dedication</div>
+                </div>
+                <div class="p-4 rounded-2xl glass-card">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400">3x</div>
+                    <div class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">Key Professional Certs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Core Competencies Section -->
+    <section id="skills" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-600 dark:text-brand-500 tracking-widest uppercase mb-2">Capabilities & Stack</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Core Competencies & Tools</p>
+                <p class="mt-3 text-slate-600 dark:text-slate-400 text-base">Filter by operational domain to explore tools and platforms managed throughout my 17-year career.</p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10 no-print" id="skillFilterContainer">
+                <button onclick="filterSkills('all')" class="skill-btn active px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-brand-600 text-white shadow-md">All Tools & Skills</button>
+                <button onclick="filterSkills('crm')" class="skill-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all glass-card text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800">Customer Support & CRM</button>
+                <button onclick="filterSkills('ops')" class="skill-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all glass-card text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800">Operations & PM</button>
+                <button onclick="filterSkills('ecom')" class="skill-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all glass-card text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800">E-Commerce & Logistics</button>
+                <button onclick="filterSkills('marketing')" class="skill-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all glass-card text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800">Marketing & Design</button>
+                <button onclick="filterSkills('admin')" class="skill-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all glass-card text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800">Admin & Compliance</button>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="skillsGrid">
+
+                <!-- Skill Card 1 -->
+                <div class="skill-card glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" data-category="crm">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Customer Support & CRM</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Omnichannel support, ticketing systems, escalation handling, and SLA maintenance.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Zendesk</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Gorgias</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Richpanel</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Salesforce</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">HubSpot</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Pipedrive</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Aircall</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="skill-card glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" data-category="ops">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-bars-progress"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Operations & Project Management</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Workflow management, task tracking, SOP creation, and executive team coordination.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Monday.com</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Asana</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">ClickUp</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Basecamp</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Trello</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Notion</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Hubstaff</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="skill-card glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" data-category="ecom">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">E-Commerce & Logistics</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Storefront management, order fulfillment, stock sync, and multi-channel listings.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Shopify / Plus</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Amazon Seller Central</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Faire</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">ShipStation</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">ShipHero</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Stock & Buy</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">WooCommerce</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="skill-card glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" data-category="marketing">
+                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-600 dark:text-pink-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Marketing & Design</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Branded email automated flows, social engagement, influencer outreach, and graphic design.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Klaviyo</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Canva</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Instagram Community</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Influencer Outreach</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Email Campaigns</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 5 -->
+                <div class="skill-card glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" data-category="admin">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-file-shield"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Admin, Compliance & Finance</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Document management, HIPAA privacy standards, basic bookkeeping, and government portals.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">QuickBooks</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Bluebeam Revu</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">PRODA & NDIS</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">HIPAA Standards</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">NSW Planning Portal</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 6 -->
+                <div class="skill-card glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" data-category="admin">
+                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Productivity & Collaboration</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Remote workspace productivity, document organization, and daily communication tools.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Google Workspace</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Microsoft Office</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Slack</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">Zoom</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">ZOHO Mail</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-brand-600 dark:text-brand-500 tracking-widest uppercase mb-2">Track Record</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Professional Experience</p>
+                <p class="mt-3 text-slate-600 dark:text-slate-400 text-base">Over 17 years of progressive experience across operations management, eCommerce, and customer service leadership.</p>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-10 no-print">
+                <div class="flex flex-wrap gap-2" id="expFilterContainer">
+                    <button onclick="filterExp('all')" class="exp-tab active px-4 py-2 rounded-xl text-xs font-bold bg-brand-600 text-white">All Roles (14)</button>
+                    <button onclick="filterExp('ops')" class="exp-tab px-4 py-2 rounded-xl text-xs font-bold glass-card text-slate-700 dark:text-slate-300">Admin & Operations</button>
+                    <button onclick="filterExp('ecom')" class="exp-tab px-4 py-2 rounded-xl text-xs font-bold glass-card text-slate-700 dark:text-slate-300">E-Commerce</button>
+                    <button onclick="filterExp('cs')" class="exp-tab px-4 py-2 rounded-xl text-xs font-bold glass-card text-slate-700 dark:text-slate-300">Customer Support & BPO</button>
+                </div>
+
+                <div class="relative w-full sm:w-64">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input type="text" id="expSearch" placeholder="Search role, tool, or company..." onkeyup="searchExp()" class="w-full pl-10 pr-4 py-2 rounded-xl glass-card text-xs sm:text-sm border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-800 dark:text-slate-100">
+                </div>
+            </div>
+
+            <!-- Timeline List Container -->
+            <div class="space-y-6" id="expTimeline">
+
+                <!-- Job Item 1 -->
+                <div class="exp-item glass-card rounded-2xl p-6 sm:p-8 transition-all hover:shadow-lg border-l-4 border-l-brand-500" data-category="ops">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-md bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-bold mb-2">Operations & Admin</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Operations & Admin Assistant</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm">Darook Private Certifiers</p>
+                        </div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-200/60 dark:bg-slate-800/60 px-3 py-1.5 rounded-xl w-fit">
+                            Mar 2023 - May 2026
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+                        <li>Managed project workflows, deadlines, and documentation using Monday.com, Pipedrive, Google Drive, and Notion to ensure efficient tracking, accurate records, and timely processing of building approvals and certifications.</li>
+                        <li>Supported daily administrative and operational functions by preparing reports, reviewing and lodging NSW Planning Portal applications, coordinating inspection schedules, and tracking compliance requirements.</li>
+                        <li>Utilized Bluebeam Revu to review, markup, and organize architectural plans, construction drawings, and certification documents while streamlining administrative procedures.</li>
+                    </ul>
+                </div>
+
+                <!-- Job Item 2 -->
+                <div class="exp-item glass-card rounded-2xl p-6 sm:p-8 transition-all hover:shadow-lg border-l-4 border-l-teal-500" data-category="ecom cs">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-md bg-teal-500/10 text-teal-600 dark:text-teal-400 text-xs font-bold mb-2">E-Commerce & Support</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Customer Support Representative</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm">Wear Felicity</p>
+                        </div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-200/60 dark:bg-slate-800/60 px-3 py-1.5 rounded-xl w-fit">
+                            Oct 2025 - Dec 2025
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+                        <li>Provided customer support through Richpanel and email handling order enquiries, shipping updates, product info, cancellations, exchanges, and returns with empathetic communication.</li>
+                        <li>Managed Shopify orders and customer accounts including order verification, fulfillment updates, refunds, exchanges, address changes, and warranty claims for personalized jewelry products.</li>
+                        <li>Improved customer satisfaction by resolving order issues efficiently and collaborating with internal teams to maintain consistent support standards.</li>
+                    </ul>
+                </div>
+
+                <!-- Job Item 3 -->
+                <div class="exp-item glass-card rounded-2xl p-6 sm:p-8 transition-all hover:shadow-lg border-l-4 border-l-indigo-500" data-category="ops">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-bold mb-2">Administrative & Insurance</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Administrative Assistant</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm">Daniel Insurance LLC</p>
+                        </div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-200/60 dark:bg-slate-800/60 px-3 py-1.5 rounded-xl w-fit">
+                            Jun 2025 - Nov 2025
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+                        <li>Assisted clients with enquiries regarding Medicare, health insurance, life insurance, and retirement annuity services while maintaining strict confidentiality.</li>
+                        <li>Prepared, reviewed, and organized client documentation for insurance applications, policy updates, renewals, and financial appointments in full compliance with HIPAA privacy standards.</li>
+                        <li>Supported daily administrative operations through calendar management, digital filing, database maintenance, and coordination between clients and insurance professionals.</li>
+                    </ul>
+                </div>
+
+                <!-- Job Item 4 -->
+                <div class="exp-item glass-card rounded-2xl p-6 sm:p-8 transition-all hover:shadow-lg border-l-4 border-l-purple-500" data-category="ops">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-bold mb-2">NDIS & Admin Support</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Administration Support</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm">Saveey Outsourcing</p>
+                        </div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-200/60 dark:bg-slate-800/60 px-3 py-1.5 rounded-xl w-fit">
+                            2024 - Jun 2025
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+                        <li>Supported administrative operations for NDIS participant services by preparing documentation and updating participant records using PRODA and NDIS systems.</li>
+                        <li>Monitored participant files, service agreements, compliance documents, and service bookings to ensure accurate, complete records for disability support services.</li>
+                        <li>Collaborated with teams at Liberty Behavioral & Community Services to streamline administrative workflows and ensure quality service delivery.</li>
+                    </ul>
+                </div>
+
+                <!-- Job Item 5 -->
+                <div class="exp-item glass-card rounded-2xl p-6 sm:p-8 transition-all hover:shadow-lg border-l-4 border-l-pink-500" data-category="ecom">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-md bg-pink-500/10 text-pink-600 dark:text-pink-400 text-xs font-bold mb-2">E-Commerce & Marketing</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Sales & Marketing Specialist</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm">Sunwink Spud Collective</p>
+                        </div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-200/60 dark:bg-slate-800/60 px-3 py-1.5 rounded-xl w-fit">
+                            Apr 2024 - Sep 2024
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+                        <li>Created branded marketing materials and managed email marketing campaigns using Canva and Klaviyo for product launches, seasonal promotions, and customer engagement.</li>
+                        <li>Managed e-commerce operations through Shopify Plus, Amazon Seller Central, and Faire, including product listings, inventory updates, order monitoring, and sales reporting.</li>
+                        <li>Provided prompt customer support for order-related concerns while coordinating sales and marketing initiatives across departments.</li>
+                    </ul>
+                </div>
+
+                <!-- Job Item 6 -->
+                <div class="exp-item glass-card rounded-2xl p-6 sm:p-8 transition-all hover:shadow-lg border-l-4 border-l-amber-500" data-category="ops ecom cs">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-bold mb-2">Senior Operations</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Support & Admin Assistant</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm">Fire Nicotine</p>
+                        </div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-200/60 dark:bg-slate-800/60 px-3 py-1.5 rounded-xl w-fit">
+                            Oct 2023 - Jul 2024
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+                        <li>Managed daily operational workflows, communications, customer inquiries, and order concerns through Gmail and Instagram.</li>
+                        <li>Driven Instagram community engagement, lead generation, and influencer outreach by responding to messages and coordinating brand collaborations.</li>
+                        <li>Developed standard operating procedures (SOPs), managed WooCommerce product listings, and optimized inventory workflows.</li>
+                    </ul>
+                </div>
+
+                <!-- Job Item 7 -->
+                <div class="exp-item glass-card rounded-2xl p-6 sm:p-8 transition-all hover:shadow-lg border-l-4 border-l-emerald-500" data-category="ops ecom cs">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold mb-2">6-Year Leadership Role</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Operations Associate</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm">Altenew LLC</p>
+                        </div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-200/60 dark:bg-slate-800/60 px-3 py-1.5 rounded-xl w-fit">
+                            Sep 2017 - Sep 2023
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+                        <li>Supported the Operations Director with daily operational coordination, project tracking, and cross-functional workflow management using Monday.com, Google Drive, and DocuSign.</li>
+                        <li>Managed customer support and escalations across Gorgias, Aircall, WhatsApp, and email with high customer satisfaction metrics.</li>
+                        <li>Managed Shopify Plus listings, supported promotional campaigns, coordinated fulfillment through ShipStation, ShipHero, and Stock&Buy, and trained new team members.</li>
+                    </ul>
+                </div>
+
+                <!-- Job Item 8 -->
+                <div class="exp-item glass-card rounded-2xl p-6 sm:p-8 transition-all hover:shadow-lg border-l-4 border-l-blue-500" data-category="ops">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Project Manager</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm">TraderHanks</p>
+                        </div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-200/60 dark:bg-slate-800/60 px-3 py-1.5 rounded-xl w-fit">
+                            Dec 2016 - Jul 2017
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+                        <li>Coordinated meetings, schedules, and project-related administrative tasks to maintain strict timelines.</li>
+                        <li>Managed customer inquiries, updated product listings, and ensured operational alignment.</li>
+                    </ul>
+                </div>
+
+                <!-- Job Item 9 -->
+                <div class="exp-item glass-card rounded-2xl p-6 sm:p-8 transition-all hover:shadow-lg border-l-4 border-l-slate-400" data-category="cs ops">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Support & Warranty Officer</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm">Deluxe Products</p>
+                        </div>
+                        <div class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-200/60 dark:bg-slate-800/60 px-3 py-1.5 rounded-xl w-fit">
+                            May 2016 - Dec 2016
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+                        <li>Managed customer support and warranty claim processing for repairs, replacements, and after-sales service.</li>
+                    </ul>
+                </div>
+
+                <!-- Earlier BPO Roles Summary -->
+                <div class="p-6 rounded-2xl glass-card bg-slate-50/50 dark:bg-slate-800/30">
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-clock-rotate-left text-brand-500"></i> Earlier Professional Foundation (2007 - 2016)
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="p-3 rounded-xl bg-white/60 dark:bg-slate-800/60">
+                            <span class="font-bold text-slate-900 dark:text-white block">Online English Tutor</span>
+                            <span class="text-slate-500">Rare Job Philippines (Sep 2012 - Apr 2016)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/60 dark:bg-slate-800/60">
+                            <span class="font-bold text-slate-900 dark:text-white block">Senior Customer Service Advocate</span>
+                            <span class="text-slate-500">Convergys Malaysia (Oct 2014 - Aug 2015)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/60 dark:bg-slate-800/60">
+                            <span class="font-bold text-slate-900 dark:text-white block">Subject Matter Expert (SME)</span>
+                            <span class="text-slate-500">Convergys Philippines (Aug 2011 - Jul 2014)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/60 dark:bg-slate-800/60">
+                            <span class="font-bold text-slate-900 dark:text-white block">Customer Service Representative</span>
+                            <span class="text-slate-500">Expert Global Solutions & TeleTech (2009 - 2011)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/60 dark:bg-slate-800/60 md:col-span-2">
+                            <span class="font-bold text-slate-900 dark:text-white block">Directory Assistance CSR</span>
+                            <span class="text-slate-500">KGB Philippines (Dec 2007 - Mar 2009)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-600 dark:text-brand-500 tracking-widest uppercase mb-2">Qualifications</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Education & Certifications</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <div class="glass-card rounded-2xl p-6 text-center transition-all hover:scale-[1.02]">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">Quality Management</span>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mt-1 mb-2">Six Sigma Yellow Belt</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Six Sigma Study</p>
+                    <p class="text-xs font-mono text-slate-600 dark:text-slate-300 mt-3 bg-slate-100 dark:bg-slate-800 py-1.5 px-3 rounded-lg inline-block">ID: 896415</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 text-center transition-all hover:scale-[1.02]">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Privacy & Compliance</span>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mt-1 mb-2">HIPAA Certified</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Alison Certification</p>
+                    <p class="text-xs font-mono text-slate-600 dark:text-slate-300 mt-3 bg-slate-100 dark:bg-slate-800 py-1.5 px-3 rounded-lg inline-block">Score: 88% | ID: 49267385</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 text-center transition-all hover:scale-[1.02]">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <span class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Finance & Accounting</span>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mt-1 mb-2">QuickBooks Online</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Level 1 Certification</p>
+                    <p class="text-xs font-semibold text-slate-600 dark:text-slate-300 mt-3 bg-slate-100 dark:bg-slate-800 py-1.5 px-3 rounded-lg inline-block">Certified Specialist</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 text-center transition-all hover:scale-[1.02]">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <span class="text-xs font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider">Degree</span>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white mt-1 mb-1">BS Business Administration</h3>
+                    <p class="text-xs font-semibold text-brand-600 dark:text-brand-400">Major in Marketing Management</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">ICCT Colleges Foundation Inc.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Contact Cards Section (Updated Contact Details & Form Removed) -->
+    <section id="contact" class="py-20 bg-slate-100/80 dark:bg-slate-900/60 no-print">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl relative text-center">
+                
+                <span class="text-xs font-bold text-brand-600 dark:text-brand-500 uppercase tracking-wider">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-2 mb-4">Let's Work Together</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed max-w-2xl mx-auto mb-10">
+                    Looking for an experienced Operations Assistant or Customer Support Specialist to optimize your business operations and workflows? Reach out directly using the contacts below.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    
+                    <!-- Email Card -->
+                    <a href="mailto:jhovictoria.work@gmail.com" class="p-6 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-brand-500 transition-all group flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <p class="text-xs text-slate-400 font-medium">Direct Email</p>
+                        <p class="font-bold text-slate-900 dark:text-white text-sm mt-1 group-hover:text-brand-500 transition-colors">jhovictoria.work@gmail.com</p>
+                    </a>
+
+                    <!-- Phone / WhatsApp Card with updated number -->
+                    <a href="tel:+638980041846" class="p-6 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-brand-500 transition-all group flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <p class="text-xs text-slate-400 font-medium">Phone / WhatsApp</p>
+                        <p class="font-bold text-slate-900 dark:text-white text-sm mt-1 group-hover:text-brand-500 transition-colors">+63 898 004 1846</p>
+                    </a>
+
+                    <!-- Location Card -->
+                    <div class="p-6 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p class="text-xs text-slate-400 font-medium">Location</p>
+                        <p class="font-bold text-slate-900 dark:text-white text-sm mt-1">Muntinlupa City, PH (Remote)</p>
+                    </div>
+
+                </div>
+
+                <!-- Resume Link CTA in Contact Section -->
+                <div class="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800 flex justify-center">
+                    <a href="https://tinyurl.com/victoriajonalyn" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-teal-600 text-white font-bold text-sm hover:from-brand-700 hover:to-teal-700 transition-all shadow-md">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span>Open Complete CV Document</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500 dark:text-slate-400 no-print">
+        <p>© 2026 Jonalyn Victoria. Operations & Customer Support Professional.</p>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        // Dark Mode Logic
+        const themeToggleBtn = document.getElementById('themeToggle');
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Skills Category Filter Logic
+        function filterSkills(category) {
+            const cards = document.querySelectorAll('.skill-card');
+            const btns = document.querySelectorAll('.skill-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md');
+                btn.classList.add('glass-card', 'text-slate-700', 'dark:text-slate-300');
+            });
+            event.target.classList.add('bg-brand-600', 'text-white', 'shadow-md');
+            event.target.classList.remove('glass-card');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Experience Timeline Category Filter
+        function filterExp(category) {
+            const items = document.querySelectorAll('.exp-item');
+            const tabs = document.querySelectorAll('.exp-tab');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-brand-600', 'text-white');
+                tab.classList.add('glass-card', 'text-slate-700', 'dark:text-slate-300');
+            });
+            event.target.classList.add('bg-brand-600', 'text-white');
+            event.target.classList.remove('glass-card');
+
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category.includes(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Experience Realtime Search Filter
+        function searchExp() {
+            const query = document.getElementById('expSearch').value.toLowerCase();
+            const items = document.querySelectorAll('.exp-item');
+
+            items.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
